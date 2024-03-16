@@ -15,6 +15,7 @@ setup(
     ],
     description='Python package for geophysical inversion tailored to Critical Zone Science.',
     long_description=open('README.md').read(),
+    long_description_content_type='text/markdown',
     license='MIT',
     keywords='geophysical inversion critical zone science',
 )

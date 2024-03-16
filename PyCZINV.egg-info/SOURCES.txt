@@ -9,6 +9,7 @@ pyczinv/__init__.py
 pyczinv/coupled_inversion.py
 pyczinv/inversion_utils.py
 pyczinv/joint_inversion.py
+pyczinv/solver.py
 pyczinv/time_lapse_inversion.py
 pyczinv/data/__init__.py
 pyczinv/data/dataloader.py
