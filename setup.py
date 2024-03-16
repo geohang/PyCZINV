@@ -2,7 +2,7 @@ from setuptools import setup, find_packages
 
 setup(
     name='PyCZINV',
-    version='0.1.0',
+    version='0.1.1',
     author='Hang Chen',
     author_email='hchen8@lbl.gov',
     packages=find_packages(),
