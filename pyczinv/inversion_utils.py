@@ -8,9 +8,6 @@ import solver
 def ertforward(fob,mesh,rhomodel,xr):
     xr1 = np.log(rhomodel.array())
     xr1[mesh.cellMarkers() == 2] = np.exp(xr)
-
-    #xr1[mesh.cellMarkers() == 1] = np.mean(np.exp(xr))
-    #xr1 = np.exp(xr)
     rhomodel = pg.matrix.RVector(xr1)
     dr = fob.response(rhomodel)
     dr = np.log(dr.array())
@@ -30,7 +27,7 @@ def ertforandjac(fob,rhomodel,xr):
 def ertforandjac2(fob,xr,mesh):
     xr1 = xr.copy()
     xr1[mesh.cellMarkers() == 2] = np.exp(xr)
-    #rhomodel = pg.matrix.RVector(xr1)
+
     rhomodel = xr1
     dr = fob.response(rhomodel)
     fob.createJacobian(rhomodel)
